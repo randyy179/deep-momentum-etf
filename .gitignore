@@ -206,10 +206,10 @@ uv.lock
 .cursorindexingignore
 
 # Data files (price data is never committed)
-data/
+/data/
 
 # Run outputs
-logs/
+/logs/
 
 # macOS
 .DS_Store

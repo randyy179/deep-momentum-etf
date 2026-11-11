@@ -1,0 +1,80 @@
+# Backtest of etf-deepm-g05: average of the best 25 of 50 models per window, next-open execution.
+save_path: backtest_results
+ticker_reference_file: etf
+data_parquet: etf.parquet
+model:
+  module: deepm.backtest.models.deep_momentum
+  class: DeepMomentum
+  train_yaml: etf-deepm-g05
+  architecture: DeePM
+  top_n_seeds: 25
+  seq_len: 84
+  pre_loss_steps: 63
+  batch_size: 8
+universe:
+  SPY:
+    group: EQUITY
+  QQQ:
+    group: EQUITY
+  IWM:
+    group: EQUITY
+  EFA:
+    group: EQUITY
+  EEM:
+    group: EQUITY
+  EWJ:
+    group: EQUITY
+  EWG:
+    group: EQUITY
+  EWU:
+    group: EQUITY
+  EWZ:
+    group: EQUITY
+  FXI:
+    group: EQUITY
+  VNQ:
+    group: EQUITY
+  SHY:
+    group: BOND
+  IEF:
+    group: BOND
+  TLT:
+    group: BOND
+  TIP:
+    group: BOND
+  LQD:
+    group: BOND
+  HYG:
+    group: BOND
+  BWX:
+    group: BOND
+  EMB:
+    group: BOND
+  GLD:
+    group: COMDTY
+  SLV:
+    group: COMDTY
+  USO:
+    group: COMDTY
+  UNG:
+    group: COMDTY
+  DBC:
+    group: COMDTY
+  DBA:
+    group: COMDTY
+  DBB:
+    group: COMDTY
+  FXE:
+    group: FX
+  FXB:
+    group: FX
+  FXA:
+    group: FX
+  FXC:
+    group: FX
+  FXF:
+    group: FX
+  FXY:
+    group: FX
+  UUP:
+    group: FX
