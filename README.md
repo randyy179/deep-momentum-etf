@@ -13,6 +13,21 @@ Run the DeePM deep momentum model on ETFs: bring your own price data, then train
 - simple reference strategies (trend following, buy and hold) evaluated under the same rules
 - one command line for data preparation, training, backtesting and reporting
 
+## Quick start
+
+```bash
+uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -e .
+export WANDB_MODE=offline   # no experiment-tracking server needed
+
+dmetf data --prices data/prices.parquet --cash-rate data/DFF.csv   # your data, see docs/DATA.md
+dmetf train                                                        # GPU recommended; --shards N runs N processes per GPU
+dmetf backtest                                                     # DeePM, ensemble and reference strategies
+dmetf report                                                       # reports/summary.csv and reports/equity.png
+```
+
+Training runs 50 random-search trials per test window for each of two cost weights. It takes a few hours on a
+single RTX 3090 and considerably longer on a laptop. `DEEPM_DEVICE=cpu|mps|cuda:0` picks the device.
+
 ## Built on
 
 This repository starts from the official DeePM code by Kieran Wood, <https://github.com/kieranjwood/deepm>, released under the MIT license. The first three commits are that code, unchanged; its original README is kept at [docs/UPSTREAM_README.md](docs/UPSTREAM_README.md). Everything after those commits is the ETF adaptation.
