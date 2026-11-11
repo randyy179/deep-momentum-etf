@@ -10,6 +10,8 @@ ARCHITECTURES = [
     "MOM_TRANS",
     "AdvancedTemporalBaseline",
     "DeePM",
+    "LINEAR",
+    "MLP",
 ]
 
 

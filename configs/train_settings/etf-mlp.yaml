@@ -1,0 +1,103 @@
+# MLP baseline: same data, loss, costs and windows as etf-deepm-g05, but the position depends only on that day's features.
+sweep_yaml: sweep-mlp
+save_directory: models_torch
+project: dmn
+
+use_lagged_cross_section: true
+use_xatt: false
+use_gnn: false
+
+use_adamw: true
+
+no_bias_in_prediction_head: true
+
+prediction_head_init: "default"
+prediction_head_std: 0.001
+
+ticker_reference_file: etf
+
+data_parquet: "etf.parquet"
+use_correlation_features: false
+
+test_run: false
+
+train_valid_split: 0.9
+seq_len: 84
+pre_loss_steps: 21
+
+iterations: 200
+random_search_max_iterations: 50
+top_n_seeds: 10
+early_stopping: 25
+smooth_alpha: 0.45
+min_delta: 0.0
+val_burnin_steps: 5
+
+optimise_loss_function: 0
+
+use_transaction_costs: true
+tcost_inputs: true
+fixed_trans_cost_bp_loss: 0
+volscale_tc_loss: true
+turnover_regulariser_scaler: 0.5
+
+use_static_ticker: true
+
+features:
+  - r1d
+  - r1m
+  - r3m
+  - r1y
+  - z_price_21d
+  - z_price_252d
+
+first_train_year: 1998
+final_test_year: 2026
+first_test_year: 2015
+test_start_years:
+  - 2015
+  - 2020
+
+ticker_subset:
+  - "SPY" # EQUITY S&P 500
+  - "QQQ" # EQUITY Nasdaq 100
+  - "IWM" # EQUITY Russell 2000
+  - "EFA" # EQUITY MSCI EAFE
+  - "EEM" # EQUITY MSCI EM
+  - "EWJ" # EQUITY Japan
+  - "EWG" # EQUITY Germany
+  - "EWU" # EQUITY UK
+  - "EWZ" # EQUITY Brazil
+  - "FXI" # EQUITY China large cap
+  - "VNQ" # EQUITY US REITs
+  - "SHY" # BOND UST 1-3y
+  - "IEF" # BOND UST 7-10y
+  - "TLT" # BOND UST 20y+
+  - "TIP" # BOND US TIPS
+  - "LQD" # BOND US IG credit
+  - "HYG" # BOND US HY credit
+  - "BWX" # BOND Intl govt bonds
+  - "EMB" # BOND EM USD bonds
+  - "GLD" # COMDTY Gold
+  - "SLV" # COMDTY Silver
+  - "USO" # COMDTY WTI crude
+  - "UNG" # COMDTY Natural gas
+  - "DBC" # COMDTY Broad commodities
+  - "DBA" # COMDTY Agriculture
+  - "DBB" # COMDTY Base metals
+  - "FXE" # FX EUR
+  - "FXB" # FX GBP
+  - "FXA" # FX AUD
+  - "FXC" # FX CAD
+  - "FXF" # FX CHF
+  - "FXY" # FX JPY
+  - "UUP" # FX USD index
+
+# --------- FIXED - DON'T CHANGE BELOW THIS LINE ------------
+reference_cols:
+  - date
+  - ticker
+target: target
+targets:
+  - target
+target_vol: 15.8745078664 # warning: keep this as it is then rescale later

@@ -1,0 +1,13 @@
+# Linear baseline (deepm/models/simple.py). hidden_dim/dropout are irrelevant for a linear map.
+method: "random"
+metric:
+    goal: "maximize"
+    name: "valid_loss_best"
+
+parameters:
+    lr: { "values": [0.0003, 0.001, 0.003] }
+    batch_size: { "values": [64, 128] }
+    weight_decay: { "values": [0.00001, 0.0001, 0.001] }
+    max_gradient_norm: { "values": [0.5, 1.0] }
+    dropout: { "values": [0.0] }
+    hidden_dim: { "values": [8] }
