@@ -108,7 +108,7 @@ This repository starts from the official DeePM code by Kieran Wood, <https://git
 
 Backtested results on historical data, not a guarantee of future returns and not investment advice. Spreads are a recent snapshot; trading costs were higher in earlier years.
 
-The backtests above use ETF price data from [Sharadar.com](https://sharadar.com) under a personal license; no price data is included in this repository. The comic was drawn with an image-generation model.
+No price data is included in this repository. The comic was drawn with an image-generation model.
 
 ## License
 
