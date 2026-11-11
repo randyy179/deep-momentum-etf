@@ -7,6 +7,10 @@
 ![license](https://img.shields.io/badge/license-MIT-green)
 [![paper](https://img.shields.io/badge/arXiv-2601.05975-b31b1b)](https://arxiv.org/abs/2601.05975)
 
+![The story in four panels](docs/figures/comic.jpg)
+
+## The headline
+
 ![Growth of $1](docs/figures/growth.png)
 
 At the same risk as SPY, DeePM + SPY earned **16.3% a year above cash against SPY's 12.3%**, with a shallower worst drawdown (−28% vs −34%). The two legs are almost uncorrelated (0.10), so each cushions the other.
@@ -103,6 +107,8 @@ This repository starts from the official DeePM code by Kieran Wood, <https://git
 ## Disclaimer
 
 Backtested results on historical data, not a guarantee of future returns and not investment advice. Spreads are a recent snapshot; trading costs were higher in earlier years.
+
+No price data is included in this repository. The comic was drawn with an image-generation model.
 
 ## License
 
