@@ -1,0 +1,34 @@
+ticker,price,old_bp,new_bp,source
+SPY,766.81,0.2,0.07,SSGA 30d median 0.00% (<0.005%) -> 1-tick
+QQQ,691.95,0.3,0.07,Invesco 30d median 0.00% (<0.005%) -> 1-tick
+IWM,284.02,0.5,0.18,iShares 30d median 0.00% (<0.005%) -> 1-tick
+EFA,105.72,0.8,0.5,iShares 30d median 0.01%
+EEM,61.62,1.0,1.0,iShares 30d median 0.02%
+EWJ,93.86,1.5,0.53,iShares 30d median 0.01%
+EWG,43.5,2.0,1.15,iShares 30d median 0.02%
+EWU,48.93,2.0,1.02,iShares 30d median 0.02%
+EWZ,32.25,1.5,1.55,iShares 30d median 0.02%
+FXI,34.59,1.5,1.5,iShares 30d median 0.03%
+VNQ,98.03,1.0,0.51,not published -> 1-tick estimate
+SHY,81.5,0.6,0.61,iShares 30d median 0.01%
+IEF,91.66,0.5,0.55,iShares 30d median 0.01%
+TLT,81.76,0.5,0.61,iShares 30d median 0.01%
+TIP,106.1,0.5,0.5,iShares 30d median 0.01%
+LQD,104.5,0.5,0.5,iShares 30d median 0.01%
+HYG,77.52,0.7,0.64,iShares 30d median 0.01%
+BWX,21.49,2.0,2.5,SSGA 30d median 0.05%
+EMB,92.44,1.0,0.54,iShares 30d median 0.01%
+GLD,372.49,0.3,0.5,SSGA 30d median 0.01%
+SLV,47.16,0.5,1.06,iShares 30d median 0.02%
+USO,145.41,1.0,0.34,not published -> 1-tick estimate
+UNG,9.27,2.0,5.39,not published -> 1-tick estimate
+DBC,31.29,3.0,1.6,Invesco 30d median 0.03%
+DBA,26.45,3.0,2.0,Invesco 30d median 0.04%
+DBB,24.81,5.0,2.02,Invesco 30d median 0.04%
+FXE,103.61,1.5,1.0,Invesco 30d median 0.02%
+FXB,129.38,2.0,6.5,Invesco 30d median 0.13%
+FXA,69.36,2.0,5.0,Invesco 30d median 0.10%
+FXC,69.98,3.0,2.0,Invesco 30d median 0.04%
+FXF,107.74,3.0,1.5,Invesco 30d median 0.03%
+FXY,57.82,2.0,1.0,Invesco 30d median 0.02%
+UUP,28.9,2.0,1.73,Invesco 30d median 0.03%

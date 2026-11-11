@@ -1,0 +1,19 @@
+# ETF version of sweep-deepm. Only change: batch_size. The cross-sectional dataset has one sample per
+# 63-day window (all assets), so the ETF train sets have only 55 (2015) / 73 (2020) samples; with the
+# paper's 64 and drop_last=True the 2015 window gets zero batches. 16/32 keeps ~1-4 batches per epoch,
+# close to the paper's near-full-batch regime (~72 futures samples, batch 64).
+method: "random"
+metric:
+    goal: "maximize"
+    name: "valid_loss_best"
+
+parameters:
+    lr: { "values": [0.0001] }
+    batch_size: { "values": [16, 32] }
+    weight_decay: { "values": [0.00001, 0.0001, 0.001] }
+    max_gradient_norm: { "values": [0.5, 1.0] }
+
+    dropout: { "values": [0.3, 0.4, 0.5] }
+
+    hidden_dim: { "values": [64, 128] }
+    num_heads: { "values": [2, 4] }
