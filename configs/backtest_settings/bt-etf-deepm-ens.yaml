@@ -1,0 +1,76 @@
+# DeePM ensemble: daily average of the gamma 0.5 and gamma 2 positions (scripts/make_ensemble.py), next-open execution.
+save_path: backtest_results
+ticker_reference_file: etf
+data_parquet: etf.parquet
+model:
+  train_yaml: etf-deepm-g05
+  module: deepm.backtest.models.precomputed
+  class: PrecomputedSignal
+  signal_file: models_torch/ensembles/etf-deepm-ens/positions.parquet
+universe:
+  SPY:
+    group: EQUITY
+  QQQ:
+    group: EQUITY
+  IWM:
+    group: EQUITY
+  EFA:
+    group: EQUITY
+  EEM:
+    group: EQUITY
+  EWJ:
+    group: EQUITY
+  EWG:
+    group: EQUITY
+  EWU:
+    group: EQUITY
+  EWZ:
+    group: EQUITY
+  FXI:
+    group: EQUITY
+  VNQ:
+    group: EQUITY
+  SHY:
+    group: BOND
+  IEF:
+    group: BOND
+  TLT:
+    group: BOND
+  TIP:
+    group: BOND
+  LQD:
+    group: BOND
+  HYG:
+    group: BOND
+  BWX:
+    group: BOND
+  EMB:
+    group: BOND
+  GLD:
+    group: COMDTY
+  SLV:
+    group: COMDTY
+  USO:
+    group: COMDTY
+  UNG:
+    group: COMDTY
+  DBC:
+    group: COMDTY
+  DBA:
+    group: COMDTY
+  DBB:
+    group: COMDTY
+  FXE:
+    group: FX
+  FXB:
+    group: FX
+  FXA:
+    group: FX
+  FXC:
+    group: FX
+  FXF:
+    group: FX
+  FXY:
+    group: FX
+  UUP:
+    group: FX
