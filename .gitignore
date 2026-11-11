@@ -210,6 +210,7 @@ uv.lock
 
 # Run outputs
 /logs/
+/reports/
 
 # macOS
 .DS_Store
