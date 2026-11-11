@@ -14,6 +14,7 @@ from deepm.models.deepm import AdvancedTemporalBaseline, SpatioTemporalGraphTran
 from deepm.models.base import DeepMomentumNetwork, DmnMode
 from deepm.models.lstm import LstmBaseline, LstmSimple
 from deepm.models.momentum_transformer import MomentumTransformer
+from deepm.models.simple import LinearBaseline, MlpBaseline
 from deepm.training.grad_accum import train_step_exact_chunked
 from deepm.utils.logging_utils import get_logger
 from deepm.utils.metrics import calmar_ratio, sharpe_ratio
@@ -97,6 +98,8 @@ class TrainDeepMomentumNetwork:
         "DeePM": SpatioTemporalGraphTransformer,
         "AdvancedTemporalBaseline": AdvancedTemporalBaseline,
         "MOM_TRANS": MomentumTransformer,
+        "LINEAR": LinearBaseline,
+        "MLP": MlpBaseline,
     }
 
     def _load_architecture(

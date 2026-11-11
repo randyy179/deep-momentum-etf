@@ -1,0 +1,12 @@
+# Buy and hold SPY (100% of capital), excess of cash.
+save_path: backtest_results
+ticker_reference_file: etf
+data_parquet: etf.parquet
+model:
+  train_yaml: etf-deepm-g05
+  module: deepm.backtest.models.precomputed
+  class: CapitalWeights
+  mode: equal
+universe:
+  SPY:
+    group: EQUITY

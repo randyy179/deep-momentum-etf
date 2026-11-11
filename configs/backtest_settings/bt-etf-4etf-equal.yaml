@@ -1,0 +1,18 @@
+# Equal capital in SPY, IEF, DBC and GLD, rebalanced daily, excess of cash.
+save_path: backtest_results
+ticker_reference_file: etf
+data_parquet: etf.parquet
+model:
+  train_yaml: etf-deepm-g05
+  module: deepm.backtest.models.precomputed
+  class: CapitalWeights
+  mode: equal
+universe:
+  SPY:
+    group: EQUITY
+  IEF:
+    group: BOND
+  DBC:
+    group: COMDTY
+  GLD:
+    group: COMDTY
