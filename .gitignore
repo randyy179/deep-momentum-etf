@@ -205,8 +205,11 @@ uv.lock
 .cursorignore
 .cursorindexingignore
 
-# Data files
-data/*.parquet
+# Data files (price data is never committed)
+data/
+
+# Run outputs
+logs/
 
 # macOS
 .DS_Store
